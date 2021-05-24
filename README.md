@@ -25,8 +25,9 @@
 -THEN I am again presented with current and future conditions for that city-
 
 ## SCREENSHOT
+![Screenshot (27)](https://user-images.githubusercontent.com/80184962/119294506-9a62ac80-bc22-11eb-8d5a-acc086d14b1a.png)
 
-
-
+##DEPLOYED APPLICATION
+[]()
 
 
