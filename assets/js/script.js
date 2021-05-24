@@ -1,8 +1,11 @@
+var userSearch = document.querySelector('#search');
 
 
-$( "#search" ).submit(function( event ) {
-    alert( "Handler for .submit() called." );
-    event.preventDefault();
-    console.log()
-  });
+
+
+userSearch.addEventListener('submit');
+
+
+
+
 

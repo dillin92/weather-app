@@ -1,3 +1,6 @@
+* {
+  margin: 0;
+}
 /*HERO*/
 
 .hero-full-screen {
@@ -76,6 +79,11 @@
   font-size: 0.8rem;
 }
 
+.middle-content-section {
+  align-items: center;
+  margin-bottom: 250px;
+}
+
 /*current weather flip card*/
 .flip-card {
   -webkit-perspective: 1000;
@@ -119,7 +127,7 @@
   background: url(https://images.pexels.com/photos/179124/pexels-photo-179124.jpeg?w=940&h=650&auto=compress&cs=tinysrg)
     0 0 no-repeat;
 
-  background-position: inherit;
+  background-size: cover;
   z-index: 2;
   display: -webkit-flex;
   display: -ms-flexbox;

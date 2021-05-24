@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
@@ -21,20 +20,17 @@
       
         <div class="middle-content-section">
           <h1>Search City for Weather Updates!</h1>
-          <div class="input-group input-group-rounded">
-            <input class="input-group-field" type="search">
-            <div class="input-group-button">
-              <input type="submit" class="button secondary" value="Search" id="search">
+            <div class="input-group input-group-rounded">
+            
+                <div class="input-group-button">
+                    <input type="text" class="input-group-field" placeholder="search for a city" id="search">
+                    <input type="submit" class="button secondary" value="Search" id="searchBtn">
+                </div>
+
             </div>
         </div>
      
         </div>
-      
-        <div class="bottom-content-section" data-magellan data-threshold="0">
-          <a href="#main-content-section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z"/></svg></a>
-        </div>
-      
-      </div>
       
       <div id="main-content-section" data-magellan-target="main-content-section">
         <!-- your content goes here -->
@@ -46,9 +42,9 @@
               <div class="flip-card-inner-back">
                 <h3 class="flip-card-inner-back-title city">City</h3>
                 <p class="flip-card-inner-back-text temp">60</p>
-                <div class="flip-card-inner-back-text description">Windy as Fuck</div>
-                <div class="flip-card-inner-back-text humidity">Moist</div>
-                <div class="flip-card-inner-back-text wind">Blowing harder than Anderson hoes at Tax Time</div>
+                <div class="flip-card-inner-back-text description">Windy, Partly Cloudy</div>
+                <div class="flip-card-inner-back-text humidity">80%</div>
+                <div class="flip-card-inner-back-text wind">24mph</div>
               </div>
             </div>
           </div>
@@ -62,8 +58,8 @@
 
     
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="assets/js/script.js"></script>
+
+    <script type="text/javascript" src="./assets/js/script.js"></script>
 
 </body>
 </html>
