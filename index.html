@@ -10,16 +10,10 @@
 <body>
 
     <div class="hero-full-screen">
-
-        <div class="top-content-section">
-          <div class="top-bar">
-            <div class="top-bar-left">
-            </div>
-          </div>
-        </div>
       
         <div class="middle-content-section">
-          <h1>Search City for Weather Updates!</h1>
+          <h1>Search a City for Weather Updates!</h1>
+
             <div class="input-group input-group-rounded">
             
                 <div class="input-group-button">
@@ -28,37 +22,28 @@
                 </div>
 
             </div>
+
         </div>
      
-        </div>
-      
-      <div id="main-content-section" data-magellan-target="main-content-section">
-        <!-- your content goes here -->
-        <div class="flip-card card" ontouchstart="this.classList.toggle('hover');">
-            <div class="flip-card-inner">
-              <div class="flip-card-inner-front">
-                <span>Weather</span>
-              </div>
-              <div class="flip-card-inner-back">
-                <h3 class="flip-card-inner-back-title city">City</h3>
-                <p class="flip-card-inner-back-text temp">60</p>
-                <div class="flip-card-inner-back-text description">Windy, Partly Cloudy</div>
-                <div class="flip-card-inner-back-text humidity">80%</div>
-                <div class="flip-card-inner-back-text wind">24mph</div>
-              </div>
-            </div>
-          </div>
     </div>
-      
+        
+    <div class="flip-card card" ontouchstart="this.classList.toggle('hover');">
+        <div class="flip-card-inner">
+            <div class="flip-card-inner-front">
+                <span id="name"></span>
+            </div>
 
+            <div class="flip-card-inner-back" id="display">
+                <div class="flip-card-inner-back-title" id="city"></div>
+                <div class="flip-card-inner-back-text" id="temp"></div>
+                <div class="flip-card-inner-back-text" id="description"></div>
+                <div class="flip-card-inner-back-text" id="humidity"></div>
+                <div class="flip-card-inner-back-text" id="wind"></div>
+            </div>    
+        </div>
     
-      
-
-      
-
+    </div>
     
-
-
     <script type="text/javascript" src="./assets/js/script.js"></script>
 
 </body>
