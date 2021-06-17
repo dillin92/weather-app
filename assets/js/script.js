@@ -8,33 +8,37 @@ var currentWeatherDisplay =document.querySelector('#display');
 
 
 
-function displayCurrentWeather(data) {
-
-
-    var name= data.name;
-    var temp= data.main.temp;
-    var feels_like= data.main.feels_like;
-    var humidity= data.main.humidity;
-    var currentWeather = temp, feels_like, humidity;
-
-    console.log(name, temp, feels_like, humidity);
-
-    var latLon = data.coord;
-    console.log(latLon);
-
-    currentCity.innerHTML = name;
-    currentWeatherDisplay.innerHTML = "TEMPERATURE:" + currentWeather;
-
-
-};
 
 
 searchBtn.addEventListener('click', function getCurrentWeather() {
     var userCity = userSearch.value.trim();
     console.log(userCity);
 
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + userCity + '&units=imperial&appid=e3a955cb151dd35974130ff7ccec57c6').then(repsonse => repsonse.json()).then(function(data) {
-        console.log(data);
-        displayCurrentWeather(data);
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + userCity + '&units=imperial&appid=e3a955cb151dd35974130ff7ccec57c6')
+    .then(response => response.json())
+    .then(data => {
+        var lat = data.coord.lat;
+        var lon = data.coord.lon;
+
+        return fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&units=imperial&appid=e3a955cb151dd35974130ff7ccec57c6')
+        .then(repsonse => repsonse.json())
+        .then(function displayWeather(data) {
+
+            var name = userCity;
+            var temp = data.current.temp;
+            var feels_like = data.current.feels_like;
+            var humidity = data.current.humidity;
+
+            console.log(name);
+
+
+            currentCity.textContent = name;
+            var cityCurrentWeather = document.querySelector('#current-city');
+            cityCurrentWeather.textContent = "Temperature:" + temp + "Feels Like:" + feels_like + "Humidity";
+        
+        });
+       
     });
 });
+
+// module.exports = getCurrentWeather, displayCurrentWeather;

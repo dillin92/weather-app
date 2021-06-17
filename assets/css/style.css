@@ -176,3 +176,10 @@
 .flip-card-inner-back-text {
   line-height: 1.3;
 }
+
+/*Weather Display card */
+
+.card {
+  background-color: azure;
+  border-radius: 15%;
+}
