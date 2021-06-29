@@ -1,0 +1,68 @@
+.card {
+  border: solid black;
+  border-radius: 8%;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: papayawhip;
+  padding: 30px;
+}
+
+.page-title {
+  font-family: monospace;
+  font-style: oblique;
+  padding: 20px;
+  justify-content: center;
+}
+
+.hero {
+  text-align: center;
+}
+
+.uvi-green {
+  border: solid black;
+  background-color: green;
+}
+
+.uvi-orange {
+  border: solid black;
+  background-color: orange;
+}
+
+.uvi-red {
+  border: solid black;
+  background-color: red;
+}
+
+.hero {
+  background-color: khaki;
+  height: 75px;
+}
+
+.search-bar {
+  background-color: lightslategray;
+  padding: 25px;
+  text-align: center;
+  width: auto;
+}
+
+.weather-displays {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 70%;
+  text-align: center;
+}
+
+.current-display {
+  background-color: powderblue;
+}
+
+.forecast-display {
+  background-color: powderblue;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}

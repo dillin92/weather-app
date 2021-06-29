@@ -5,61 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Weathernator</title>
 </head>
 <body>
 
-    <div class="hero-full-screen">
-      
-        <div class="middle-content-section">
-          <h1>Search a City for Weather Updates!</h1>
+    <section class="hero">
+        <h1 class="page-title">Weathernator</h1>
+    </section>
 
-            <div class="input-group input-group-rounded">
-            
-                <div class="input-group-button">
-                    <input type="text" class="input-group-field" placeholder="search for a city" id="search">
-                    <input type="submit" class="button secondary" value="Search" id="searchBtn">
-                </div>
-
-            </div>
-
-        </div>
-     
-    </div>
-        
-    <div class="flip-card card" ontouchstart="this.classList.toggle('hover');">
-        <div class="flip-card-inner">
-            <div class="flip-card-inner-front">
-                <span id="name"></span>
-            </div>
-
-            <div class="flip-card-inner-back" id="display">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h2 class="card-title" id="city"></h5>
-                      <h3 class="card-subtitle mb-2 text-muted" id="current-weather"></h6>
-                        <img id="icon" src=""/></div>
-                      <p class="card-text" id="temp"></p>
-                      <p class="card-text" id="feels-like"></p>
-                      <p class="card-text" id="humidity"></p>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h2 class="card-title" id="mcity"></h5>
-                      <h3 class="card-subtitle mb-2 text-muted" id="forecast"></h6>
-                        <img id="micon" src=""/></div>
-                      <p class="card-text" id="max-temp"></p>
-                      <p class="card-text" id="min-temp"></p>
-                      <p class="card-text" id="mfeels-like"></p>
-                      <p class="card-text" id="mhumidity"></p>
-                    </div>
-                </div>
-            </div>    
-        </div>
     
-    </div>
+    
+    <main class="container">
+
+        <section class="left-panel">
+
+            <div class="search-bar">
+    
+                <h1>Search a City for Weather Updates!</h1>
+        
+                  <div class="input-group">
+                  
+                      <div class="input-group-button">
+                          <input type="text" class="input-group-field" placeholder="search for a city" id="search">
+                          <input type="submit" class="button secondary" value="Search" id="searchBtn">
+                      </div>
+        
+                  </div>
+        
+            </div>
+
+            <div id="city-container"></div>
+    
+        </section>
+    
+        <section class="weather-displays">
+
+            <div class="current-display">
+                <h1>Current Weather</h1>
+                <div id="current-weather"></div>
+            </div>
+        
+            <div class="forecast-display">
+                <h1>5 Day Forecast</h1>
+                <div id="display"></div>
+            </div>
+            
+        </section>
+        
+    </main> 
+    
+    
+
+        
+
+    </main>
+    
+ 
 
     
     <script type="text/javascript" src="./assets/js/script.js"></script>

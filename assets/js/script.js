@@ -1,10 +1,14 @@
 var userSearch = document.querySelector('#search');
 var searchBtn = document.querySelector('#searchBtn');
 var currentCity = document.querySelector('#name');
-var currentWeatherDisplay =document.querySelector('#display');
+var currentWeatherDisplay =document.querySelector('#current-weather');
 var innerCardBody = document.querySelector('#display');
+var cities = [];
+var cityContainer = document.querySelector('#city-container');
+
 
 searchBtn.addEventListener('click', function getCurrentWeather() {
+    
     var userCity = userSearch.value.trim();
     console.log(userCity);
 
@@ -19,7 +23,8 @@ searchBtn.addEventListener('click', function getCurrentWeather() {
         .then(function displayWeather(data) {
             
             //current weather variables
-            var name = userCity;
+         
+            var capitalCity = userCity.charAt(0).toUpperCase() + userCity.slice(1);
             var temp = data.current.temp.toFixed(0);
             var feels_like = data.current.feels_like.toFixed(0);
             var humidity = data.current.humidity.toFixed(0);
@@ -47,6 +52,12 @@ searchBtn.addEventListener('click', function getCurrentWeather() {
                  
                 card.appendChild(cardDivider);
                 card.appendChild(cardBody);
+
+                var nameEl = document.createElement('h1');
+                nameEl.className = 'name';
+                nameEl.setAttribute('id', 'name');
+                nameEl.textContent = capitalCity;
+                cardDivider.appendChild(nameEl);
 
                 var dateEl = document.createElement('h1');
                 dateEl.className = 'date';
@@ -81,19 +92,32 @@ searchBtn.addEventListener('click', function getCurrentWeather() {
                 forecastWindSpeedEl.textContent = "Wind-speed:" + currentWindspeed + "MPH";
                 cardDivider.appendChild(forecastWindSpeedEl);
 
-                var currentUviEl = document.createElement('h2')
-                currentUviEl.classname = "uvi";
+                var currentUviEl = document.createElement('div')
+               
                 currentUviEl.setAttribute("id", "uvi");
                 currentUviEl.textContent = uvi;
+
+                // if(uvi <= 5){ 
+                //      currentUviEl.setAttribute("style","background-color:green; border: solid black;");
+                // } 
+            
+                //  if(uvi =7){
+                //     currentUviEl.setAttribute("style","background-color:orange; border: black;")
+                //  } 
+                    
+                // if(uvi >= 8){
+                //     currentUviEl.setAttribute("style","background-color:red; border: black;")
+                // };
+
                 cardDivider.appendChild(currentUviEl);
 
-                innerCardBody.appendChild(card);
+                currentWeatherDisplay.appendChild(card);
 
-
+               
            
         });
-       
-    });
+        
+    }).then(saveCity());
  
 });
 
@@ -192,3 +216,27 @@ searchBtn.addEventListener('click', function getForecast() {
     });
         
 });
+
+
+
+function saveCity() {
+    var userCity = userSearch.value.trim();
+    const cityDataObj = {
+        city: userCity
+    };
+
+    console.log(cityDataObj);
+
+    cities.push(cityDataObj);
+    console.log(cities);
+    localStorage.setItem('cities', JSON.stringify(cities));
+};
+
+function displaySavedCity () {
+    let userCities = localStorage.getItem('cities', JSON.parse(cities));
+
+    let userCitiesEl = document.createElement('div');
+    userCitiesEl.setAttribute('id', 'user-cities');
+    userCitiesEl.textContent
+
+}
