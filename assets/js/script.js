@@ -4,10 +4,12 @@ var currentCity = document.querySelector('#name');
 var currentWeatherDisplay =document.querySelector('#current-weather');
 var innerCardBody = document.querySelector('#display');
 var cities = [];
+var savedCities = localStorage.getItem('cities', cities);
 var cityContainer = document.querySelector('#city-container');
 
 
 searchBtn.addEventListener('click', function getCurrentWeather() {
+
     
     var userCity = userSearch.value.trim();
     console.log(userCity);
@@ -119,6 +121,7 @@ searchBtn.addEventListener('click', function getCurrentWeather() {
         
     }).then(saveCity()).then(displaySavedCity());
  
+    clearDisplay();
 });
 
 
@@ -214,6 +217,8 @@ searchBtn.addEventListener('click', function getForecast() {
     
         });
     });
+
+    clearDisplay();
         
 });
 
@@ -450,3 +455,16 @@ function displaySavedCity () {
         cityContainer.appendChild(userCitiesEl);
 
 };
+
+function clearDisplay () {
+    innerCardBody.innerHTML = "";
+    currentWeatherDisplay.innerHTML = "";
+};
+
+
+
+
+
+
+
+
