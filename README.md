@@ -1,33 +1,23 @@
-# Weather App
+# Weathernator
+  ## Description
+  The weathernator app takes your searched city and provides the current weather and 5-day forecast for that city. When you search a city that search is then saved in local storage and a button is created in the left-panel, which you can use to search a past cities weather again. 
+  ## Installation
+  By accessing it via a link provided below in this readme document.
+  ## Usage Information
+  Search a new city and view the weather or simply click on one of the buttons from your past searches to search that city again.
+  
+  ![Screenshot (37)](https://user-images.githubusercontent.com/80184962/124087554-1c16d880-da20-11eb-8919-8a326e237fbd.png)
 
-## CRITERIA
+  ## Questions
+  *You can check out my Github Profile at the link below*
 
--GIVEN a weather dashboard with form inputs-
+  [dillin92](http://github.com/dillin92)
 
--WHEN I search for a city-
+  *If you need to reach me with additional questions my email is:*
 
--THEN I am presented with current and future conditions for that city and that city is added to the search history-
-
--WHEN I view current weather conditions for that city-
-
--THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index-
-
--WHEN I view the UV index-
-
--THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe-
-
--WHEN I view future weather conditions for that city-
-
--THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity-
-
--WHEN I click on a city in the search history-
-
--THEN I am again presented with current and future conditions for that city-
-
-## SCREENSHOT
-![Screenshot (27)](https://user-images.githubusercontent.com/80184962/119294506-9a62ac80-bc22-11eb-8d5a-acc086d14b1a.png)
+  dillin970@gmail.com
 
 ##DEPLOYED APPLICATION
-[Weather App](https://dillin92.github.io/weather-app/)
+[Weathernator](https://dillin92.github.io/weather-app/)
 
 
