@@ -1,11 +1,26 @@
 .card {
-  border: solid black;
-  border-radius: 8%;
+  border: solid black 2px;
   display: inline-flex;
   flex-direction: column;
   flex-wrap: wrap;
-  background-color: papayawhip;
+  background-color: white;
   padding: 30px;
+}
+
+#current-weather-card {
+  width: inherit;
+  height: 400px;
+  background-color: white;
+  border-bottom: solid black;
+  border-top: solid black;
+}
+
+.current-card {
+  width: inherit;
+  height: 400px;
+  background-color: white;
+  border-bottom: solid black;
+  border-top: solid black;
 }
 
 .page-title {
@@ -69,6 +84,15 @@
 
 #city-container {
   background-color: lightslategray;
+  border-top: solid black 2px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+#user-cities {
+  border-radius: 15%;
 }
 
 .input-group-rounded .input-group-field {
